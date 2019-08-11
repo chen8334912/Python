@@ -1,0 +1,200 @@
+# python = ['lcg','szw','zjw']
+# linux = ['lcg']
+#
+# # he = []
+# # for i in python:
+# #     if i in linux:
+# #         he.append(i)
+# # print(he)
+# chris = set(python)
+# chris.update('1','2','4')
+# print(chris)
+
+# msg = 'i am %s %s %.4f %.4s' % ('chris','df',99.234561213,'lksdjfl;kskjaf')
+# print(msg)
+# tpl = 'i am %(name)s age %(age)d ' %{'name':'alex', 'age':19}
+# print(tpl)
+# tps1 = 'i am %(name)-60s  my hobby is alex' % {'name':'lhf'}
+# print(tps1)
+# tps2 = 'i am %(name)+60s  my hobby is alex' % {'name':'lhf'}
+# print(tps2)
+# tps3 = 'i am %(name)+60s  my hobby is alex' % {'name':'lhf'}
+# print(tps3)
+# tpl4 = 'i am {1}'.format('chris', 'dkslj')
+# print(tpl4)
+# tpl5 = 'i am {name}, age {age}, really{go}'.format(name = 'chris',age = 11,go = 11)
+# tpl5 = 'i am {name}, age {age}, really{go}'.format(**{'name': 'chris','age' : 11,'go' : 11})
+# tpl5 = "i am {0[0]}, age {0[1]}, really {0[2]}".format([1, 2, 3], [11, 22, 33])
+# tpl = "i am {:s}, age {:d}, money {:f}".format("seven", 18, 88888.1)
+# tpl = 'i am {:s}, age {:d}'.format(*['seven', 1])
+# print(tpl)
+
+
+
+# def chris(x):
+#     y = 3*x+12
+#     return y
+# chris(3)
+
+# print(list(zip(('a', 'b', 'c', 'd'),(1, 2, 3, 4))))
+# p = {'name':'alex', 'age':18, 'gril':'sadf'}
+# print(dict(zip(p.keys(),p.values())))
+# print(list(zip(p.keys(),p.values())))
+# print(tuple(zip(p.keys(),p.values())))
+
+
+# age_dic={'age1':18, 'age2':28, 'age9':48, 'age4':88}
+# # print(max(age_dic.values()))
+# # print(max(age_dic))
+# chris = max(zip(age_dic.values(),age_dic.keys()))
+# print(chris)
+
+# l1= ['a10', 'b12', 'c12']
+# print(list(max(l1)))
+
+# a = [1,2,3]
+# b = [4,5,6]
+# c = [4,5,6,7,8]
+# print(list(zip(a,b)))     # 打包为元组的列表
+# # >>> zip(a,c)              # 元素个数与最短的列表一致
+# # [(1, 4), (2, 5), (3, 6)]
+# # >>> zip(*zipped)          # 与 zip 相反，*zipped 可理解为解压，返回二维矩阵式
+# # [(1, 2, 3), (4, 5, 6)]
+
+# people = [
+#     {'name' : 'chris1', 'age' : 1000},
+#     {'name' : 'chris2', 'age' : 10000},
+#     {'name' : 'chris3', 'age' : 100000},
+#     {'name' : 'chris11', 'age' : 10000000},
+# ]
+# print(max(people, key=lambda dic:dic['name']))
+
+# ret= []
+# for i in people:
+#     ret.append(i['age'])
+# print(ret)
+# print(max(ret))
+
+
+# def odd(x):
+#     return x % 2
+#
+# temp = filter(odd, range(10))
+# print(list(temp))
+
+#
+# print(list(filter(lambda x: x % 2 , range(10))))
+# print(list(map(lambda x: x * 2, range(10))))
+
+
+# def factorial(digital):
+#     result = digital
+#     for i in range(1 , digital):
+#         result *= i
+#     return result
+#
+# digital = 5
+# result = factorial(digital)
+# print('%d factorial is %d' % (digital, result))
+
+# digital = int(input('input:'))
+# def factorial(digital):
+#     if digital == 1:
+#         return 1
+#     else:
+#         return digital * factorial(digital-1)
+# res = factorial(digital)
+# print(res)
+
+# def hanoi(n, x, y, z):
+#     if n == 1:
+#         print(x,'--->',z)
+#     else:
+#         hanoi(n-1, x, z, y)
+#         print(x, '--->', z)
+#         hanoi(n-1,y,x,z)
+# n = 4
+# hanoi(n,'x','y','z')
+
+# dict1 = dict(f=70, i=103, s=115)
+# dict1['x']='ss'
+# dict1['f']='ss'
+# print(dict1)
+
+# from web.web1.web2.cal import add       # 执行__init__文件
+#
+# add(3,5)
+
+
+'''''
+时间模块
+
+import time, sys, datetime
+print(sys.path)
+print(time.time())        # 时间戳, 返回当前时间的时间戳（1970纪元后经过的浮点秒数）
+print(time.localtime())       # 格式化时间戳, 格式化时间戳为本地的时间，结构化时间---当地时间，time.localtime(time.time)
+t = time.localtime()
+print(t.tm_mday)
+print(time.gmtime())       # 格式化时间戳, 格式化时间戳为UTC时间，结构化时间---UTC时间（世界标准时间）
+print(time.mktime(time.localtime()))        # 结构化时间转换成时间戳
+print(time.strftime('%Y - %m - %d %X', time.localtime()))        # 结构化时间转换成字符串时间，年大写，时分秒大写的X
+print(time.strptime('2019 - 07 - 19 13:56:21','%Y - %m - %d %X'))        # 字符串时间转换成结构化时间
+print(time.asctime())               #  将时间元组转换为字符串。“1998年6月6日星期六16:26:11”。如果时间元组不存在，则使用localtime()返回的当前时间。
+print(time.ctime(156351988))        #  将纪元以来的时间(以秒为单位)转换为本地时间中的字符串。这相当于asctime(localtime(seconds))。如果时间元组不存在，则使用localtime()返回的当前时间。
+print(datetime.datetime.now())
+
+
+'''''
+
+'''''
+random模块
+
+
+随机生成五位密码1
+
+import random
+
+def v_code():
+    ret = ''
+    for i in range(5):
+        num = random.randint(0,9)
+        lif = chr(random.randint(65,122))
+        s = str(random.choice([num, lif]))
+        ret += s
+    return ret
+print(v_code())
+
+
+
+
+随机生成五位密码2
+
+import random
+def v_code():
+    ret = ''
+    for i in range(13):
+        num = random.randint(0,122)
+        if num < 9:
+           num = num
+        if num > 65:
+            num = chr(num)
+        else:
+            pass
+        s = str(num)
+        ret += s
+    return ret[:5]
+print(v_code())
+ 
+'''''
+'''''
+# 最后的data["name"]必须是"，因为dumps的时候转成"
+
+import json
+
+with open('/Volumes/Work/Python/wenjian' , 'r') as f :
+    data  = json.load(f)
+    print(data["name"])
+
+'''''
+
+
