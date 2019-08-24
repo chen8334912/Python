@@ -252,7 +252,7 @@ p1.get_star()
 
 '''''
 
-
+'''''
 #------>>  动态导入模块
 
 from m1.t import *
@@ -274,3 +274,82 @@ print(w)
 w.test1()
 w.test2()
 w._test3()
+
+
+'''''
+
+
+
+class Foo:
+    x = 1
+    def __init__(self,y):
+        self.y = y
+
+    def __getattr__(self, item):        #self为实例对象，item为调用的属性
+                                        # __getattr__只有在使用点调用属性且属性不存在的时候才会触发
+        print('触发__getattr__---->你要调取的属性【%s】不存在'%item)
+
+    def __delattr__(self, item):        #__delattr__删除属性的时候会触发
+        print('触发__delattr__---->删除了相关属性')
+
+    def __setattr__(self, key, value):  #__setattr__添加/修改属性会触发它的执行
+        print('触发__setattr__---->修改了相关属性')    # 因为你重写了__setattr__,凡是赋值操作都会触发它的运行,你啥都没写,
+                                                      # 就是根本没赋值,除非你直接操作属性字典,否则永远无法赋值
+        self.__dict__[key] = value
+
+
+f = Foo(2)       #实例化相当于赋值操作，则触发__setattr__
+f.z = 3          #增加z属性，则触发__setattr__
+print(f.y)     #2
+f.yyyy         #触发__getattr__---->你要调取的属性【yyy】不存在
+
+del f.x        #触发__delattr__---->删除了相关属性
+
+
+
+'''''
+
+
+class Foo:
+    x = 1
+    def __init__(self,y,tag = False):
+        self.y = y
+        self.tag = tag
+
+    def __getattr__(self, item):        #self为实例对象，item为调用的属性
+                                        # __getattr__只有在使用点调用属性且属性不存在的时候才会触发
+        print('触发__getattr__---->你要调取的属性【%s】不存在'%item)
+
+    def __delattr__(self, item):        #__delattr__删除属性的时候会触发
+        if self.tag == True:                    #可用来判断用户是否有权限删除属性
+            print('已经删除属性【%s】'%item)
+            self.__dict__.pop(item)
+        else:
+            print('无权限删除')
+
+    def __setattr__(self, key, value):  #__setattr__添加/修改属性会触发它的执行
+            if type(value) is str:          #可用来判断用户设置的属性是否是指定的类型
+                print('已将【%s】属性设置为【%s】'%(key,value))
+                self.__dict__[key] = value
+            else:
+                print('设置的属性不合法！')
+
+f = Foo(2)
+
+# 1 可以用__getattr__来提示用户调用的属性不存在，而不是直接报错
+print(f.z)                      #触发__getattr__---->你要调取的属性【z】不存在
+
+# 2 可以用__delattr__来根据用户权限来是否执行删除操作，可以保护类的属性
+f1 = Foo(3)
+del f1.y                        #因为f1实例没有传入tag权限属性值      ---> 无权限删除
+print(f1.__dict__)              #{'y': 3, 'tag': False}
+f2 = Foo(4,True)                #传入了tag权限为True，所以可以执行删除操作
+del f2.y                        #已经删除属性【y】
+print(f2.__dict__)              #{'tag': True}
+
+# 3 可以用__setattr__来规范用户传值类型
+f3 = Foo('5')                   #已将【y】属性设置为【5】
+
+
+
+'''''
