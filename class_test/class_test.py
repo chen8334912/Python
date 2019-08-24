@@ -251,3 +251,26 @@ p1.get_star()
 
 
 '''''
+
+
+#------>>  动态导入模块
+
+from m1.t import *
+test1()
+test2()
+# _test3()        # 使用了封装的函数，在用*的情况外部是调用不到函数的
+
+
+s = __import__('m1.t')
+print(s)
+s.t.test1()
+s.t.test2()
+s.t._test3()
+
+import importlib
+
+w = importlib.import_module('m1.t')
+print(w)
+w.test1()
+w.test2()
+w._test3()
