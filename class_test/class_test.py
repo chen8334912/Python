@@ -225,3 +225,29 @@ v1 = Vehicle('北京地铁','10000km/s',1000000,'电')
 
 
 '''''
+
+'''''
+
+class People:
+    _star = 'fuck'
+    __star = 'earth'
+    def __init__(self,id,name,age):
+        self.id = id
+        self.name = name
+        self.age = age
+    def get_id(self):
+        print('我是私有方法，我找到的id是%s' %self.id)
+        
+    # 访问函数,通过类内部去调用自己的方法
+    def get_star(self):        
+        print(self.__star)
+
+p1 = People(1048,'chris',32)
+print(p1._star)
+print(People.__dict__)
+print(p1._People__star)
+p1.get_star()
+
+
+
+'''''
