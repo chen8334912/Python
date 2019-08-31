@@ -105,3 +105,64 @@ tree.write('output.xml')
 
 
 '''''
+
+
+
+tree = ET.parse('xml_lesson.html')   # 将xml文件加载并返回ElementTree对象。parser是一个可选的参数，如果为空，则默认使用标准的XMLParser解析器。
+root = tree.getroot()           # 获得根节点
+print(root, root.tag)
+
+'''''
+for child in root:
+    print('遍历root的下一层', child.tag, '----', child.attrib)
+    for i in child:
+        print('遍历root的再下一层', i.tag,'----', i.text, i.attrib)
+
+
+
+for node in root.iter('year'):
+    print(node.tag, node.text)
+    new_year = int(node.text) + 1
+    node.text = str(new_year)
+    node.set('updated', ' yes')
+tree.write('xmltest.xml')
+
+for gdp in root.iter('gdppc'):
+    gdp.text = '12'
+tree.write('xmltest111.xml')
+
+
+'''''
+
+'''''
+
+for country in root.findall('country'):   #  根据标签名查找root下的所有标签
+    rank = int(country.find('rank').text)
+    if rank > 50:
+        root.remove(country)
+
+tree.write('output.xml')
+
+'''''
+
+'''''
+
+# 创建xml文档
+
+import xml.etree.ElementTree as ET
+
+new_xml = ET.Element("namelist")
+name = ET.SubElement(new_xml, "name", attrib={"enrolled": "yes"})
+age = ET.SubElement(name, "age", attrib={"checked": "no"})
+sex = ET.SubElement(name, "sex")
+sex.text = '33'
+name2 = ET.SubElement(new_xml, "name", attrib={"enrolled": "no"})
+age = ET.SubElement(name2, "age")
+age.text = '19'
+
+et = ET.ElementTree(new_xml)  # 生成文档对象，生成文档树
+et.write("test.xml", encoding="utf-8", xml_declaration=True)
+
+ET.dump(new_xml)  # 打印生成的格式
+
+'''''
