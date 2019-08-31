@@ -79,7 +79,7 @@ dp2 = dp[['quantity', 'item_name']]
 # -- 将item_price转换为浮点数
 
 print(dp['item_price'])
-# apply函数的格式为：apply(func,*args,**kwargs)
+
 dp['item_price']= dp['item_price'].apply(lambda x: float(x[1:]))
 print(dp['item_price'])
 
@@ -91,12 +91,23 @@ print(dp['item_price'])
 
 '''''
 
-# 函数应用和映射
-import numpy as np
-import pandas as pd
+
+
+
+
+
+
+
+
+'''''
+
+
+# 函数应用和映射,关于apply函数的格式为：apply(func,*args,**kwargs)的解释
 
 df = pd.DataFrame(np.random.randn(4, 3), columns=list('bde'), index=['utah', 'ohio', 'texas', 'oregon'])
 print(df)
+
+
 """
                b         d         e
 utah   -0.667969  1.974801  0.738890
@@ -125,7 +136,7 @@ oregon    2.939397
 dtype: float64
 """
 
-'''''
+
 # 除标量外，传递给apply的函数还可以返回由多个值组成的Series
 def f(x):
     return pd.Series([x.min(), x.max()], index=['min', 'max'])
