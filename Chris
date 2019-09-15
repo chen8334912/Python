@@ -198,3 +198,37 @@ with open('/Volumes/Work/Python/wenjian' , 'r') as f :
 '''''
 
 
+
+
+
+# 多态
+
+class H2O:
+    def __init__(self,name,temperature):
+        self.name = name
+        self.temperature = temperature
+    def turn_ice(self):
+        if self.temperature < 0:
+            print('[%s]温度太低结冰了' %self.name)
+        if self.temperature > 0 and self.temperature < 100:
+            print('[%s]液化成水了' % self.name)
+        if self.temperature > 100:
+            print('[%s]温度太高成水蒸气了' % self.name)
+
+class Water(H2O):
+    pass
+
+class Ice(H2O):
+    pass
+
+class Steam(H2O):
+    pass
+
+
+w1 = Water('水',25)
+i1 = Ice('冰',-25)
+s1 = Steam('蒸汽',125)
+
+def func(obj):
+    obj.turn_ice()
+func(w1)

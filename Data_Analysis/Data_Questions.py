@@ -146,10 +146,7 @@ Cards进行排序
 -- 选取以字母G开头的球队数据
 -- 选取前7列
 -- 选取除了最后3列之外的全部列
--- 找到英格兰(England)、意大利(Italy)
-和俄罗斯(Russia)
-的射正率(Shooting
-Accuracy)
+-- 找到英格兰(England)、意大利(Italy)和俄罗斯(Russia)的射正率(Shooting Accuracy)
 
 import pandas as pd
 
@@ -567,7 +564,8 @@ del iris['class']
 iris.loc[0:2, :] = np.nan
 
 # 删除有缺失值的行
-iris = iris.dropna(how='any')
+# axis：0-行操作（默认），1-列操作    how：any-只要有空值就删除（默认），all-全部为空值才删除   inplace：False-返回新的数据集（默认），True-在愿数据集上操作
+iris = iris.dropna()
 
 # 重新设置索引
 iris = iris.reset_index(drop=True)  # 加上drop参数，原有索引就不会成为新的列
@@ -677,5 +675,3 @@ texas   -0.66
 oregon  -0.15
 """
 '''''
-
-

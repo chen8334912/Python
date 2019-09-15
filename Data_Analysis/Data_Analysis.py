@@ -424,3 +424,21 @@ print(chipo.columns)
 
 print(chipo[[ 'quantity', 'item_name']].groupby(by = 'quantity',as_index=False).max())
 # print(chipo[['item_name','quantity']].groupby(by=['item_name']).sum().sort_values(by=['quantity'],ascending=False))
+
+
+
+
+
+
+# K-Mean算法
+
+# 重新设置Id列为index值
+data = pd.read_excel('/Volumes/Work/Python/Data_Analysis/untitled folder/i_nuc.xls',index_col='Id',sheet_name='Sheet2')
+outputfile = r'/Volumes/Work/Python/Data_Analysis/untitled folder/i_nuc_new.xls'
+
+k = 3
+iteration = 500
+
+zscoredfile = r'/Volumes/Work/Python/Data_Analysis/untitled folder/zscoreddata.xls'
+data_zs = 1.0*(data - data.mean())/data.std()
+data_zs.to_excel(zscoredfile,index=False)
