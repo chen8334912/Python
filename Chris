@@ -203,32 +203,336 @@ with open('/Volumes/Work/Python/wenjian' , 'r') as f :
 
 # 多态
 
-class H2O:
-    def __init__(self,name,temperature):
-        self.name = name
-        self.temperature = temperature
-    def turn_ice(self):
-        if self.temperature < 0:
-            print('[%s]温度太低结冰了' %self.name)
-        if self.temperature > 0 and self.temperature < 100:
-            print('[%s]液化成水了' % self.name)
-        if self.temperature > 100:
-            print('[%s]温度太高成水蒸气了' % self.name)
+# class H2O:
+#     def __init__(self,name,temperature):
+#         self.name = name
+#         self.temperature = temperature
+#     def turn_ice(self):
+#         if self.temperature < 0:
+#             print('[%s]温度太低结冰了' %self.name)
+#         if self.temperature > 0 and self.temperature < 100:
+#             print('[%s]液化成水了' % self.name)
+#         if self.temperature > 100:
+#             print('[%s]温度太高成水蒸气了' % self.name)
+#
+# class Water(H2O):
+#     pass
+#
+# class Ice(H2O):
+#     pass
+#
+# class Steam(H2O):
+#     pass
+#
+#
+# w1 = Water('水',25)
+# i1 = Ice('冰',-25)
+# s1 = Steam('蒸汽',125)
+#
+# def func(obj):
+#     obj.turn_ice()
+# func(w1)
 
-class Water(H2O):
-    pass
+'''''
 
-class Ice(H2O):
-    pass
+import modu as md
+import sys
 
-class Steam(H2O):
-    pass
+print(md)
+print(hasattr(md,'chris'))
+print(getattr(md,'chris'))
 
 
-w1 = Water('水',25)
-i1 = Ice('冰',-25)
-s1 = Steam('蒸汽',125)
+if hasattr(md,'chris'):
+    func = getattr(md,'chris')
+    func()
+else:
+    print('no go')
 
-def func(obj):
-    obj.turn_ice()
-func(w1)
+x=1111
+fish=sys.modules[__name__]
+print(hasattr(fish,'x'))
+
+
+'''''
+
+'''''
+
+
+
+class Foo:
+    x=1
+    def __init__(self,y):
+        self.y=y
+
+    def __getattr__(self, item):
+        print('----> from getattr:你找的属性不存在')
+
+
+    def __setattr__(self, key, value):
+        print('----> from setattr')
+        # self.key=value #这就无限递归了,你好好想想
+        # self.__dict__[key]=value #应该使用它
+
+    def __delattr__(self, item):
+        print('----> from delattr')
+        # del self.item #无限递归了
+        self.__dict__.pop(item)
+
+'''''
+
+
+'''''
+
+class Foo:
+    def __init__(self,age):
+        self.n=age
+
+    def __getattr__(self, item):
+        print('go go go')
+    def __getattribute__(self, item):
+        print('bu gou')
+        raise AttributeError('has no attribute')
+        # raise  TabError('XXXXXXX')
+
+# class Bar(Foo):
+#     pass
+#
+# b1=Bar()
+# print(isinstance(b1,Bar))
+# print(isinstance(b1,Foo))
+# print(type(b1))
+
+
+
+f1=Foo(10)
+print(f1.n)
+# f1.xxx
+
+
+'''''
+
+
+'''''
+
+class Goo:
+    name='chris'
+    def __init__(self,age):
+        self.n=age
+
+    def __getitem__(self, item):
+        print('getitem',item)
+        return self.__dict__[item]
+
+    def __setitem__(self, key, value):
+        print('setitem')
+        self.__dict__[key]='value'
+
+    def __delitem__(self, key):
+        print('delitem')
+        self.__dict__.pop(key)
+
+g1=Goo(10)
+print(g1.__dict__)
+
+
+# g1.name='micheal'       # 触发了setatter的内置函数
+g1['name']='fish'
+g1['sex']='man'
+print(g1.__dict__)
+
+
+
+g1['name']
+print(g1['name'])
+
+
+
+# del g1.name       # 触发了delatter的内置函数
+del g1['name']
+print(g1.__dict__)
+
+
+print(Goo.__dict__)
+
+
+
+'''''
+
+
+'''''
+format_dic={
+    'ymd':'{0.year}-{0.month}-{0.day}',
+    'mdy':'{0.month}-{0.day}-{0.year}',
+    'y:m:d':'{0.year}:{0.month}:{0.day}'
+}
+class Foo:
+    def __init__(self,year,month,day):
+        self.year=year
+        self.month=month
+        self.day=day
+
+    def __format__(self, format_spec):
+        print('let us gogogo')
+        print(format_spec)
+        if not format_spec or format_spec not in format_dic:
+            format_spec='mdy'
+        fm=format_dic[format_spec]
+        return fm.format(self)
+
+d1=Foo(2016,12,22)
+# format(d1)
+print(format(d1))
+print(format(d1,'ymd'))
+
+
+
+'''''
+
+
+
+'''''
+
+# __slots__:字典会占用大量的内存，如果一个属性很少的类，但有很多的实例，为了节省内存可以使用__slots__来取代实例的__dict__
+
+class Foo:
+    __slots__ = 'name'
+
+f1=Foo()
+print(f1.__slots__)
+#print(f1.__dict__)  # f1不再有__dict__
+f1.name='chris'
+print(f1.name)
+print(f1.__slots__)
+
+
+class Bar:
+    __slots__ = ('name','age')
+n=Bar()
+n.name='fish'
+n.age=18
+print(n.__slots__)
+
+
+'''''
+
+'''''
+
+class Foo:
+    def __init__(self,name):
+        self.name=name
+    def __del__(self):
+        print('let us go')
+    def __call__(self, *args, **kwargs):
+        print('实例执行啦,obh()')
+
+f1=Foo('chris')   # Foo上级的__call__
+# del f1.name
+f1()   # Foo下的__call__
+del f1
+print('_____?????')   # 删除实例的时候才会触发__del__
+# print(f1.__dict__)
+# print(dir(f1))
+
+
+'''''
+
+
+
+'''''
+class Foo:
+    def __init__(self,age):
+        self.age=age
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.age == 10:
+            raise StopIteration('break')
+        self.age+=1
+        return self.age
+
+f1=Foo(10)
+
+print(f1.__next__())
+print(f1.__next__())
+print(f1.__next__())
+print(f1.__next__())
+print(next(f1))
+print(next(f1))
+print(next(f1))
+print(next(f1))
+
+for i in f1:        # obj=iter(f1)----->>f1.__iter__()
+    print(i)        # obj.__next__()
+
+'''''
+
+
+
+'''''
+
+# 斐波那契数列
+
+# 1 类实现内部魔法方法
+
+class Fibonacci(object):
+    def __init__(self,n):
+        self.n = n   # 生成数列的个数
+        self.current = 0   # 保存当前生成到的数据列的第几个数据，生成器中性质，记录位置，下一个位置的数据
+        self.a = 0
+        self.b = 1
+    def __iter__(self):   # 迭代器的__iter__ 返回自身即可
+        return self
+    def __next__(self):   # 当使用next()函数调用时，就会获取下一个数
+        if self.current < self.n:
+            self.a, self.b = self.b , self.a+self.b
+            self.current += 1
+            return self.a,self.b
+        else:
+            raise StopIteration('liang le ya')
+if __name__ == '__main__':
+    f1=Fibonacci(15)
+    for i in f1:
+        print(i)
+        
+        
+
+# 2 生成器
+
+def Fib(max):
+    a,b = 0,1
+    while max > 0:
+        a,b = b,a+b
+        max-=1
+        yield a,b
+
+for i in Fib(11):
+    print(i)
+
+
+'''''
+# 实现了 __get__()、__set__()、__del__() 其中至少一个方法的类，就是一个描述符
+# 描述符优先级: 类属性--->>>数据描述符--->>>实例属性--->>>非数据描述符--->>>找不到属性触发__getattr__
+
+class Foo:
+    def __get__(self, instance, owner):
+        print('===>get方法')
+    def __set__(self, instance, value):
+        print('===>set方法',instance,value)
+        instance.__dict__['x']=value #b1.__dict__
+    def __delete__(self, instance):
+        print('===>delete方法')
+
+
+class Bar:
+    x=Foo() #在何地？
+    def __init__(self,n):
+        self.x=n #b1.x=10
+b1=Bar(10)
+print(b1.__dict__)
+b1.x=11111111111111111
+print(b1.__dict__)
+#
+b1.y=11111111111111111111111111111111111111
+print(b1.__dict__)
