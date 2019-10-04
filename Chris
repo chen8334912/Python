@@ -1,3 +1,1424 @@
+# # #-*- coding: UTF-8 -*-
+# #
+# #
+# # #print('hello world')
+# # #
+# # # name = "chris"
+# # #
+# # # if "c"  in name:
+# # #     if "cio" in name:
+# # #         print('sao')
+# # #     else:
+# # #         print('shaabi')
+# # #     print('ok')
+# # # else:
+# # #     print('diao')
+# # #
+# # #
+# # # a = 123
+# # # s = a.__abs__()
+# # # print(s)
+# # #
+# # #
+# # # int
+# # #
+# # # # str
+# # #
+# # #
+# # #
+# # # name = ' aleX'
+# # # n = name.find('a')
+# # # print(n)
+# #
+# #
+# #
+# # # name = 'sdfjkl  lllll lllll iooio'
+# # # n = '444'.join(name)
+# # # print(n)
+# #
+# #
+# # #
+# # # m = '123 123 345 89089090-8'
+# # # n = str.maketrans('123', 'jsl')
+# # # new_m = m.translate(n)
+# # # print(new_m)
+# #
+# # #
+# # # m = '1sdklafjkldsjf90-8'
+# # # n = m.swapcase()
+# # # print(n)
+# #
+# #
+# # # m = '刘德华'
+# # # n = len(m)
+# # # print(n)
+# #
+# #
+# # #
+# # m='3127894789'
+# #
+# # # chris = 0
+# # #
+# # # while chris < len(m):
+# # #     n = m[chris]
+# # #     print(n)
+# # #     chris += 1
+# # # print('======')
+# # #
+# # #
+# # # m = 1
+# # # n = 0
+# # # while m < 101:
+# # #     n = m + n
+# # #     m = m + 1
+# # # print(n)
+# #
+# # for n in m:
+# #     print(n)
+#
+#
+#
+#
+#
+# # chris = 'sadf1231531231'
+# # for m in chris:
+# #     print(m)
+# #     break
+#
+# # chris = 'sadf1231531231'
+# # for m in chris:
+# #     continue
+# #     print(m)
+#
+#
+# #
+# # m = 1
+# # while m < 10:
+# #     print(m)
+# #     m = m + 1
+# # print(1111111111111)
+# #
+# #
+# # n = '123456789'
+# # for ml in n:
+# #     print(ml)
+# # #
+# #
+# # v = range(1, 10,2)
+# # for chris in v:
+# #     print(chris)
+# #
+# #
+# # m = 1
+# # while m < 10:
+# #     if m % 2 != 0:
+# #         pass
+# #     else:
+# #         print(m)
+# #     m = m + 1
+# # print(1222223333456)
+# #
+# #
+# # chris = '我想我是海'
+# # fish =  chris.index('我')
+# # print(fish)
+#
+#
+#
+#
+# chris = input('请输入：')
+# fish = len(chris)
+# m = range(fish)
+# for n in m:
+#     print(n, chris[n])
+
+
+# chris = input('请输入：')
+# m1, m2 = chris.split('+')
+# m1 = int(m1)
+# m2 = int(m2)
+# print(m1 + m2)
+
+
+# n1 = 0
+# n2 = 0
+# chris = input('请输入：')
+# for m in chris:
+#     if m.isdigit():
+#         n1 += 1
+#     elif m.isalpha():
+#         n2 += 1
+# print(n1, n2)
+
+
+# chris = '敬爱的{name}, 最喜欢在{where}地方干{what}'
+# na = input('请输入姓名：')
+# whe = input('请输入地方事情：')
+# wh = input('请输入事情：')
+# n = chris.format(name = na, where = whe, what = wh)
+# print(n)
+
+#
+# chris = '敬爱的{}, 最喜欢在{}地方干{}'
+# na = input('请输入姓名：')
+# whe = input('请输入地方事情：')
+# wh = input('请输入事情：')
+# n = chris.format(na, whe, wh)
+# print(n)
+#
+
+'''''
+li = [1, 12, 9, 'cklsaj', ['df', 9, 12], True]
+for chris in li:
+    print(chris)
+
+'''''
+list
+
+# li = [1, 12, 9, 'cklsaj', ['df', 9, 12], True]
+
+# # li[2] = 11111
+# # print(li)
+#
+# #
+# # del li[3]
+# # print(li)
+#
+# li = [1, 12, 9, 'cklsaj', ['df', 9, 12], True]
+# v = li[4][2]
+# print(v)
+
+
+# m = [12, 1564, 11, '婆婆', 'sadf', [1, 451, 'oo']]
+# l = ''
+# for n in m:
+#     l = l + str(n)
+# print(l)
+
+
+#
+# li = [1,1,1,2,3,45,1,2,1]
+# li.remove(1)
+#     while 1 in li:
+#     li.remove(1)
+# print(li)
+
+
+# tu = (11, 2323, '213', 123123)
+# v = tu.index(123)
+# print(v)
+
+
+# l1	=	[11,22,33]
+# l2	=	[22,33,44]
+# a.	 获取内容相同的元素列表
+# b.	 获取 l1	 中有， l2 中没有的元素列表
+# c.	 获取 l2	 中有， l1 中没有的元素列表
+# d.	 获取 l1	 和 l2	 中内容都不同的元素
+
+
+# l1	=	[11, 22, 33]
+# l2	=	[22, 33, 44]
+#
+# for m in l1:
+#     if m in l2:
+#         pass
+#     else:
+#         print(m)
+# for n in l2:
+#     if n in l1:
+#         pass
+#     else:
+#         print(n)
+#
+
+#
+# v = 0
+# for n in range(1, 9):
+#     for m in range(1, 9):
+#         if n != m:
+#             v += 1
+# print(v)
+# num = 0
+# li = [1, 2, 3, 4, 5]
+# for v in range(len(li)):
+#     for w in range(len(li)):
+#         if v != w:
+#             num += 1
+# print(num)
+
+# for i in range(1,10):
+#     string = ""
+#     for j in range(1,i+1):
+#         string +=str(j) + " * "+str(i) + " = " +str(i*j)+"\t"
+#     print(string)
+#
+
+#
+# for a in range(1, 10):
+#     for b in range(1, a+1):
+#         print(str(a)+ " * " +str(b)+ " = " +str(a * b)+'\t')
+#
+#
+#
+#
+# if x + y + z ==100 and 5*x + 3*y + z/3 ==100
+#     print(x, y, z)
+
+
+# #99乘法表
+#
+# for i in range(1,10):
+#     string = ""
+#     for j in range(1,i+1):
+#         string +=str(j) + " * "+str(i) + " = " +str(i*j)+"\t"
+#     print(string)
+#
+# for m in range(1, 10):
+#     num = ''
+#     for n in range(1, m+1):
+#         num += str(m) + '*' + str(n) + '=' + str(m*n) + '\t'
+#     print(num)
+#
+#
+# for m in range(1, 100//5):
+#     for n in range(1, 100//3):
+#         for l in range(1, 100):
+#             if m + n + l == 100 and 5*m + 3*n + l/3 == 100:
+#                 print(m,n,l)
+
+
+# li = ['alex','eric','rain']
+# m = '_'.join(li)
+# print(type(m), m)
+# n = m.replace('_','')
+# s = '_'.join(n)
+# print(s)
+
+
+# li = [11, 22, 33, "asd", "xyz", "879", "hello"]
+#
+# m = str(item) for item in li:
+# n = '_'.join(m)
+# print(n)
+
+
+# li = ['alex','eric',123]
+# # m = ''
+# # for i in li:
+# #     m = m + str(i)
+# #     n = '_'.join(m)
+# # print(m)
+#
+# li[2] = str(li[2])
+# m = '_'.join(li)
+# print(m)
+
+#
+# li = ['alex','eric',123]
+#
+# li = map(str, li)
+# print('_'.join(li))
+#
+# s = {[1, 2, 3], 1}
+# print(s)
+
+# s = set('hello')
+# l = set(['dsf', 'wer', 'ewrwerwr'])
+# print(s, l)
+
+#
+# fuchouzhe = ['zhizhuxia', 'bianfuxia', 'shandianxia']
+# zhengyi = ['shenqinvxia', 'bianfuxia', 'haiwang']
+#
+# lianggelianmen = []
+# for hero in fuchouzhe:
+#     if hero in zhengyi:
+#         lianggelianmen.append(hero)
+# print(lianggelianmen)
+
+# chris = {1, 2, 3, 4, 5, 6}
+# fish = {2, 3, 4, 5, 7, 9}
+# chris.symmetric_difference_update(fish)
+# print(chris.isdisjoint(fish))
+
+# chris = 'percent %(fish).2f' % {'fish': 98.8947598475}
+# print(chris)
+
+
+# print('root', 'x', '0', '0', sep = ',')
+
+
+# chris = 'i am {}, age {}, {}'.format('chris', 18, 88)
+# chris = 'i am {2}, age {0}, {1}'.format('chris', 18, 88)
+# chris = 'i am {0[0]}, age {0[1]}, really {1[0]}'.format([1, 2, 5], [3, 4, 8])
+# chris = 'i am {chris}, age {fish}, really {li}'.format(**{'chris':'chris', 'fish': '18', 'li': '88'})
+# chris = 'i am {:s}, age {:s}, really {:d}'.format(*['chris', '6789', 18])
+# chris = 'i am {1}, age {0}, really {2}'.format('chris', '88', 18)
+# chris = 'num: {:b}, {:o}, {:d}, {:x}, {:X}, {:%}'.format(12, 12, 12, 12, 12, 12)
+# print(chris)
+
+# def test(x):
+#     y = 2 * x + 1
+#     return y
+# print(test)
+# a= test(3)
+# print(a)
+
+
+'''''
+# def test(x, y, z):
+#     print(x)
+#     print(y)
+#     print(z)
+# test(8, 2, 3)
+# test(x = 9, y = 2, z = 3)
+# # 位置参数在关键字参数左边
+#
+# test(8, 2, z = 3)
+#
+'''''
+
+# def chris(x, y = 'fish'):
+#     print(type(x), x)
+#     print(type(y), y)
+# chris('lksjfkl','890')
+# chris('hello', y = 'klsdjf')
+
+# def test(x, *args):
+#     print(x)
+#     print(args)
+#     print(args[0])
+#     print(args[0][0])
+# # test(1, 2, 3, 4, 8, 9)
+# test(1, *['x', 'y' ,'z'])
+# # test(1, ['x', 'y' ,'z'])
+#
+
+
+# def test(x, **kwargs):
+#     print(x)
+#     print(kwargs)
+# test(1, y = 3,w = 5)
+
+
+# def chris(x, *args, **kwargs):
+#     print(x)
+#     print(*args)
+#     print(**kwargs)
+# chris(1, 1, 2, 3, q=3, w=4)
+
+
+# name = ['sjdlkf']
+#
+# def chris():
+#     name.append('wer')
+#     print('我的名字', name)
+#
+# chris()
+
+# 全局变量大写，局部变量小写
+
+# NAME = '海风'      #1
+#
+# def shazi():
+#     name = '傻子'      #3
+#     print(name)      #4
+#     def pangzi():
+#         name = '胖子'      #6
+#         print(name)      #7
+#         def shouzi():
+#             name = '瘦子'      #10
+#             print(name)      #11
+#         shouzi()      #8
+#     pangzi()
+#     print(name)      #9
+#
+# shazi()      #2
+
+
+# chris = 'shuai'
+#
+# def mic():
+#     global chris
+#     chris = 'ku'
+#     print(chris)
+# print(chris)
+# mic()
+# print(chris)
+#
+#
+#
+#
+# name = "刚娘"
+#
+# def weihou():
+#     name = "陈卓"
+#     def weiweihou():
+#         global name
+#         name = "冷静"
+#     weiweihou()
+#     print(name)
+#
+# print(name)
+# weihou()
+# print(name)
+
+
+'''''递归函数
+
+def chris(n):
+    print(n)
+    if n > 0:
+        chris(n-1)
+    else:
+        print('----------')
+    print(n)
+
+chris(3)
+
+'''''
+
+# person_list=['alex','wupeiqi','linhaifeng','zsc']
+# def ask_way(person_list):
+#     print('-'*60)
+#     if len(person_list) == 0:
+#         return '根本没人知道'
+#     person=person_list.pop(0)
+#     if person == 'linhaifeng':
+#         return '%s说:我知道,老男孩就在沙河汇德商厦,下地铁就是' %person
+#
+#     print('hi 美男[%s],敢问路在何方' % person)
+#     print('%s回答道:我不知道,但念你慧眼识猪,你等着,我帮你问问%s...' % (person, person_list))
+#
+#     res=ask_way(person_list)
+#
+#
+#     print('%s问的结果是: %res' %(person,res))
+#     return res
+#
+# res=ask_way(person_list)
+# print(res)
+
+
+# jishubu = ['李铁峰', '王瑞涛', '严岳','陈亮']
+# def wenlu(jishubu):
+#     if len(jishubu) == 0:
+#         return '没有人知道'
+#     ren = jishubu.pop(0)
+#     if ren == '王瑞涛':
+#         return '左边'
+#
+#     print('%s， 你知道怎么去厕所嘛' %ren)
+#     print('%s说我帮你问问 %s' %(ren, jishubu))
+#
+#     res = wenlu(jishubu)
+#     print('%s问的结果是: %res' %(ren,res))
+#     return res
+# res = wenlu(jishubu)
+# print(res)
+
+
+# name = 'chris'
+# def foo():
+#     if name != 'chris':
+#         return 'wo shi shuaige'
+#     else:
+#         return 'laji'
+
+# name = 'jdlskajf'
+# def chris(name):
+#     return name+'_sb'
+#
+# print(chris(name))
+
+
+# name = 'chris'
+#
+# def foo():
+#     name = 'fish'
+#     def bar():
+#         name = 'micheal'
+#         def tt():
+#             print(name)
+#         return tt
+#     return bar
+# ln = foo()()()
+# print(ln)
+
+
+# name = 'chris'
+# sj = lambda x : name+'_shuaqi'
+# print(sj(name))
+
+'''''
+def cal(x):
+    return 2*x+1
+
+print(cal(5))
+
+'''''
+
+# def foo(n): #n=bar
+#     print(n)
+#
+# def bar(name):
+#     print('my name is %s' %name)
+#
+# # foo(bar)
+# # foo(bar())
+# # foo(bar('alex'))
+
+
+num = [1, 2, 10, 5, 3, 7]
+num2 = [1, 22, 10, 5, 3, 7]
+
+# chris = []
+# for i in num:
+#     chris.append(i**2)
+# print(chris)
+
+#
+# def pf(shuzu):
+#     chris = []
+#     for i in num2:
+#         chris.append(i**2)
+#     return chris
+#
+# print(pf(num2))
+
+# def map_test(func,array):
+#     ret=[]
+#     for i in num_l:
+#         res=func(i) #add_one(i)
+#         ret.append(res)
+#     return ret
+#
+# print(map_test(add_one,num))
+
+
+# num=[1,2,10,5,3,7]
+
+
+# li = []
+# # for i in num:
+# #     li.append(i**2)
+# # print(li)
+#
+# def pingfang(zhi):
+#     for i in zhi:
+#         li.append(i**2)
+#     return li
+# print(pingfang(num))
+#
+# print(list(map(lambda x:x**2, num)))
+
+# peo=['alex_sb','wupeiqi_sb','linhaifeng','yuanhao_sb']
+
+# li = []
+# for i in peo:
+#     if not i.endswith('sb'):
+#         li.append(i)
+# print(li)
+#
+# def chris(fangfa, zhi):
+#     li = []
+#     for i in zhi:
+#         if not fangfa(i):
+#             li.append(i)
+#     return li
+#
+# res = chris(lambda x:x.endswith('sb'), peo)
+# print(res)
+
+#
+#
+# print(list(filter(lambda x:not x.endswith('sb'), peo)))
+
+
+li = [1, 2, 3, 100]
+
+#
+# ret = 0
+# for i in li:
+#     ret += i
+# print(ret)
+
+
+# def chris(zhi):
+#     ret = 0
+#     for i in zhi:
+#         ret += i
+#     return ret
+# print(chris(li))
+
+# def xiangjia(x,y):
+#     return x+y
+#
+# def chris(func, array):
+#     res = 0
+#     for i in array:
+#         res += i
+#     return res
+# print(chris(xiangjia, li))
+# print(reduce(lambda x,y:x+y,li))
+
+
+#
+#
+# num_l=[1,2,3,100]
+# def reduce_test(func,array,init=None):
+#     if init is None:
+#         res=array.pop(0)
+#     else:
+#         res=init
+#     for num in array:
+#         res=func(res,num)
+#     return res
+# print(reduce_test(lambda x,y:x+y,num_l))
+
+
+# name='你好'
+# print(bytes(name,encoding='utf-8').decode('utf-8'))
+
+
+# age_dic={'alex_age':18,'wupei_age':20,'zsc_age':100,'lhf_age':30}
+#
+#
+# print(list(max(zip(age_dic.values(),age_dic.keys()))))
+
+
+# print(max(age_dic.values()))
+#
+# #默认比较的是字典的key
+# # print(max(age_dic))
+#
+# for item in zip(age_dic.values(),age_dic.keys()): #[(18,'alex_age')  (20,'wupeiqi_age') () () ()]
+#     print(item)
+# #
+# print('=======>',list(max(zip(age_dic.values(),age_dic.keys()))))
+
+# l=[
+#     (5,'e'),
+#     (1,'b'),
+#     (3,'a'),
+#     (4,'d'),
+# ]
+# # l1=['a10','b12','c10',100] #不同类型之间不能进行比较
+# l1=['a10','a2','a10'] #不同类型之间不能进行比较
+# print(list(max(l)))
+# print('--->',list(max(l1)))
+
+
+# l=[1,3,100,-1,2]
+# print(max(l))
+# dic={'age1':18,'age2':10}
+# print(max(dic)) #比较的是key
+# print(max(dic.values())) #比较的是key，但是不知道是那个key对应的
+#
+# print(max(zip(dic.values(),dic.keys()))) #结合zip使用
+#
+
+# people=[
+#     {'name':'alex','age':1000},
+#     {'name':'wupei','age':10000},
+#     {'name':'yuanhao','age':9000},
+#     {'name':'linhaifeng','age':18},
+# ]
+#
+# age_dic={'alex_age':18,'wupei_age':20,'zsc_age':100,'lhf_age':30}
+#
+# # ret = []
+# # for i in people:
+# #     ret.append(i['age'])
+# # print(ret)
+#
+# print(sorted(people, key=lambda x:x['age']))
+
+
+# chris = open('eop.py', 'r')
+# data = chris.readlines()
+# fish = open('eop.py', 'w')
+# fish.write(data[0])
+# chris.close()
+# fish.close()
+
+# f = open('日志文件', 'rb')
+#
+# for i in f:
+#     offs=-3
+#     n=0
+#     while True:
+#         f.seek(offs,2)
+#         data=f.readlines()
+#         if len(data) > 1:
+#             print('最后一行%s' %(data[-1].decode('utf-8')))
+#             break
+#         offs*=2
+
+
+# l=[1,3,100,-1,2]
+# res = l.__iter__()
+# print(res)
+# print(res.__next__())
+# print(next(res))
+# print(next(res))
+
+
+# egglist = []
+# for i in range(10):
+#     egglist.append('鸡蛋%s'%i)
+# print(egglist)
+#
+# l = ['鸡蛋%s' %i for i in range(10)]   # 列表解析
+# print(l)
+
+# laomuji = ('鸡蛋%s' % i for i in range(3))   # 生成器表达式，生成器表达式比列表解析更省内存
+# print(laomuji)
+# print(next(laomuji))
+# print(next(laomuji))
+#
+
+# print(sum(i for i in range(10)))
+
+
+# def xiadan():
+#     ret = []
+#     for i in range(10):
+#         ret.append('鸡蛋%s' %i)
+#     return ret
+# print(xiadan())
+#
+#
+# x = ['鸡蛋%s' %i for i in range(100)]
+# print(x)
+#
+# y = ('鸡蛋%s' %i for i in range(100))
+# print(next(y))
+# print(next(y))
+# print(next(y))
+# print(next(y))
+# print(next(y))
+# print(next(y))
+
+# def xiadan():
+#     for i in range(10):
+#         yield '鸡蛋%s' %i
+# chris = xiadan()
+# print(next(chris))
+# print(next(chris))
+# print(next(chris))
+# print(next(chris))
+
+# def chris():
+#     ret = []
+#     with open('renkou.py', 'w') as f:
+#         for i in f:
+#             ret.append(i)
+#     return ret
+# print(chris())
+
+
+'''''
+
+def get_popu():
+    with open('renkou.py', 'r') as f:
+        for i in f:
+            yield i
+
+g = get_popu()     # g是一个生成器，Python的生成器是一个返回可以迭代对象的函数
+s1 = eval(g.__next__())     # eval函数就是实现list、dict、tuple与str之间的转化
+print (type(s1))
+print (s1['num'])
+# res = 0
+# for p in g:
+#     p_dic = eval(p)
+#     print (p_dic['num'])
+#     res += p_dic['num']
+# print (res)
+
+all_pop = sum(eval(i)['num'] for i in g)
+print (all_pop)
+
+
+for p in g:
+    print (eval)
+
+'''''
+
+'''''
+def test():
+    print('开始')
+    first = yield 99
+    print('第一次', first)
+    second = yield 2
+    print('第二次',second)
+    yield 3
+
+t = test()
+res = t.__next__()
+print(res)
+t.send(55)
+t.send(88)
+
+'''''
+
+'''''
+
+import time
+
+list = ['roubaozi', 'caibaozi', 'jiucaibaozi','niuroubaozi','23']
+def ren(name):
+    print('我是%s 等着吃包子' %name)
+    while True:
+        baozi = yield
+        time.sleep(2)
+        print('这个%s包子是我%s最爱吃的' %(baozi,name))
+def bao():
+    l1 = ren('chris')
+    l2 = ren('mc')
+    l1.__next__()
+    l2.__next__()
+    for i in list:
+        l1.send(i)
+        l2.send(i)
+bao()
+
+'''''
+
+'''''
+
+def func(start, end, a = 0, b = 0):
+    if start == end:
+        return a,b
+    if start %3 == 0 and start %7 == 0:
+        a += 1
+        b += start
+    ret = func(start+1, end, a, b)
+    return ret
+res = func(1, 300)
+print(res)
+
+
+
+
+
+
+def func(zifu1):
+    a=0
+    b=0
+    c=0
+    for i in zifu1:
+        if i.isupper():
+            a+=1
+        elif i.islower:
+            b+=1
+        elif i.isdigit:
+            c+=1
+    return ({a,b,c})
+zifu1 = ('aaa111AAA')
+print(func(zifu1))
+
+
+
+# for i in range(1,10):
+#     string = ''
+#     for m in range(1,i+1):
+#         string += str(m)+'*'+str(i)+'='+str(m*i)+'\t'
+#     print(string)
+
+# def fetch():
+#     pass
+#
+# if __name__ == '__main__':
+#     msg = '''
+#     1：查询
+#     2：添加
+#     3：删除
+#     4：修改
+#     5：退出
+#     6: 其他操作
+#     '''
+#
+#     option = input('please insert your choice').strip()
+#     while True:
+#         if option == '5':break
+
+
+'''''
+
+dog1={
+    'name':'kj',
+    'gender':'mu',
+    'type':'yegou'
+}
+
+def jiao(dog):
+    print('a dog %s, wang wang wang' %dog['name'])
+
+def chishi(dog):
+    print('a %s , eat big bian' %dog['type'])
+
+jiao(dog1)
+chishi(dog1)
+
+
+
+
+
+
+#
+# def dog(name,gender,type):
+#
+#     def jiao(dog):
+#         print('a dog %s, wang wang wang' %dog['name'])
+#
+#     def chishi(dog):
+#         print('a %s , eat big bian' %dog['type'])
+#
+#     def init(name,gender,type):
+#         dog1={
+#             'name':name,
+#             'gender':gender,
+#             'type':type,
+#             'jiao':jiao,
+#             'chishi':chishi,
+#         }
+#         return dog1
+#
+#     res = init(name,gender,type)
+#     return res
+#
+# d1 = dog('yuanhao','mu','zhongkjklj')
+# d2 = dog('hao','mugong','zasdfsdafsdfsdfhongkjklj')
+# print(d1)
+# print(d2)
+# # d1['jiao'](d1)
+
+
+
+def school(name,add,type):
+
+    def kaoshi(xuexiao):
+        print('%s kaoshiing' %add)
+
+    def zhaosheng(xuexiao):
+        print('%s zhaoshenging' %xuexiao['name'])
+    def kaichu(xuexiao):
+        print('%s kaichuing' %xuexiao['name'])
+
+    def init(name,add,type):
+        school_new = {
+            'name' : name,
+            'add' : add,
+            'type' : type,
+            'kaoshi' : kaoshi,
+            'zhaosheng' : zhaosheng,
+            'kaichu' : kaichu,
+
+        }
+        return school_new
+
+    res = init(name,add,type)
+    return res
+
+school1 = school('oldboy','shahe','sili')
+print(school1)
+school1['kaoshi'](school1)
+
+'''''
+
+'''''
+
+
+#------- 数据属性     变量
+#------- 数据属性     就是函数，在面向对象里通常被称为方法
+
+
+#--------类和对象都通过点来访问自己的属性
+
+
+
+#---------------------数据属性即变量，类的定义与函数又及其类似，其实可以用函数的作用域来理解类的属性调用
+
+
+
+# 类       -------->>>>   一种数据结构，用来描述一类事物（事物即数据和动作的结合体），用它来生成真实的物体（实例）
+# 对象     -------->>>>   一个具体的事物（事物即数据和动作的结合体）
+# 实例化   -------->>>>   由类生产对象的过程叫实例化，类实例化的结果就是一个对象，或者叫做一个实例（实例=对象）
+
+
+
+
+
+
+class Chinese:
+    '这是一个中国人的类'
+    print('这是一个中国人的类')
+    # pass
+    dang = '共产党'
+    def tutan():
+        print('随地吐痰')
+    def cha(self):
+        print('就喜欢插队')
+    def __init__(self,name,age,gender):
+        print('let\'s kaishi')
+        self.name = name     # 这里的self就是实例自己，赋予了一个name的数据属性
+        self.age = age
+        self.gender = gender
+        print('jieshu')       # __init__的返回值只能是None，或者没有返回值
+
+
+    # def __init__(name,age,gender):
+    #     dic = {
+    #         'name':name,
+    #         'age':age,
+    #         'gender':gender,
+    #         'tuan':tuan,
+    #         'cha':cha
+    #     }
+    #     return dic
+
+
+P1 = Chinese(11,12,13)
+print(P1.__dict__)
+print(P1.__dict__['name'])
+print(P1.name)
+print(P1.dang)
+# Chinese()     #实例化过程，返回的结果是个对象，实例是通过引用的方式调用类的数据属性
+#
+# print(Chinese)
+#
+# print(Chinese.dang)
+# Chinese.tutan()
+# Chinese.cha('chris')
+# print(dir(Chinese))
+# print(Chinese.__dict__['dang'])
+# Chinese.__dict__['cha']('kl')
+
+
+
+
+'''''
+
+'''''
+print(Chinese.__dict__)       # 查看类C的属性字典
+print(Chinese.__name__)       # 查看类C的名称
+print(Chinese.__doc__)       # 查看类C的文档字符串
+print(Chinese.__base__)       # 查看类C的第一个父类
+print(Chinese.__bases__)       # 查看类C的所有父类构成的元组
+print(Chinese.__module__)       # 查看类C的所在的模块
+print(Chinese.__class__)       # 实例C对应的类
+
+'''''
+
+'''''
+
+
+class Ball:
+    def setName(self,name):               # __init__构造方法，实例化一个对象，方法在对象被创建的时候就会自动被调用
+        self.name = name
+        print('i am %s' % self.name)
+
+P1 = Ball()
+P1.setName(11)
+
+
+
+'''''
+
+'''''
+
+
+class Person():
+    name = '123'
+
+print(Person.name)
+print(Person().name)      
+
+'''''
+
+'''''
+
+class Parent:
+    def hello(self):
+        print('正在调用父类的方法')
+
+class Son(Parent):
+    def hello(self):
+        print('老子自己也有')
+
+Son().hello()
+
+
+'''''
+
+'''''
+
+
+import random
+
+class Fish:
+    def __init__(self):            # 定义属性
+        self.x = random.randint(0,10)
+        self.y = random.randint(0,10)
+
+    def move(self):
+        self.x -= 1
+        print('我的位置是', self.x , self.y)
+
+# class Goldfish(Fish):
+#     pass
+# class Carp(Fish):
+#     pass
+# class Salmon(Fish):
+#     pass
+
+class Shark(Fish):
+    def __init__(self):            # 定义属性
+        # Fish.__init__(self)   # 新的init方法没有初始化x，y坐标，重写init方法前先调用Fish的init方法
+        # super().__init__()       # super自动找出基类和方法
+        self.hungry = True
+    def eat(self):            # 定义方法
+        if self.hungry:
+            print('吃货的梦想就是天天有的吃')
+            self.hungry = False
+        else:
+            print('吃撑了，吃不下了')
+
+
+shake = Shark()
+shake.eat()
+shake.eat()
+shake.move()
+
+
+
+# Fish().move()
+# goldfish = Goldfish()
+# goldfish.move()
+# goldfish.move()
+# goldfish.move()
+# goldfish.move()
+
+
+'''''
+
+'''''
+
+class Turtle:
+    def __init__(self,x):
+        self.num = x         # 这里的self就是实例自己，赋予了一个num的数据属性
+
+class Fish:
+    def __init__(self,x):
+        self.num = x
+
+class Pool:
+    def __init__(self,x,y):
+        self.turtle = Turtle(x)
+        self.fish = Fish(y)
+    def print_num(self):
+        print('水池共有乌龟%s只，小鱼%s只' %(self.turtle.num, self.fish.num))
+
+pool = Pool(1,10)
+pool.print_num()
+
+
+
+
+
+class C:
+    count = 0
+
+a= C()
+b= C()
+c= C()
+print(a.count, b.count, c.count)
+
+c.count += 10
+print(a.count, b.count, c.count)
+
+C.count -= 100
+print(a.count, b.count, c.count)
+
+
+'''''
+
+'''''
+
+
+class CC:
+    def setXY(self,x,y):
+        self.x = x
+        self.y = y
+
+    def printXY(self):
+        print(self.x, self.y)
+
+dd =  CC()
+# print(dd.__dict__)
+print(CC.__dict__)
+dd.setXY(4,5)
+print(dd.__dict__)
+print(CC.__dict__)
+
+
+'''''
+
+'''''
+
+class A:
+    pass
+
+class B(A):
+    pass
+b = B()
+print(issubclass(B,A))
+print(issubclass(A,A))
+print(issubclass(A,B))
+print(issubclass(A,object))     # object是所有类的基类
+
+print(isinstance(b, B))
+print(isinstance(b, A)) 
+
+
+
+'''''
+
+'''''
+
+#------------并未使用init函数---------
+
+
+class Ball:
+    gan = 'dsjafklj'
+    def setName(self,name):
+        self.name = name
+        print('%s is shuaiqi' %name)
+    def tutan():
+        print('随地吐痰')
+    def cha(self):
+        print('就喜欢插队')
+    def eat(self,food):
+        print('%s eating %s' %(self.name,food))
+
+
+# b = Ball()
+# print(Ball.gan)
+# print(Ball.__dict__['gan'])
+# print(b.gan )
+# Ball.tutan()
+# print(Ball.__dict__['tutan']())
+# b.cha()
+# b.setName('chris')
+
+b = Ball()
+b.setName('chr')
+b.eat('shi')
+
+
+
+
+#------------使用init函数---------
+
+
+
+class Ball:
+    gan = 'dsjafklj'
+    def __init__(self,name):
+        self.name = name
+        print('%s is shuaiqi' %name)
+    def tutan():
+        print('随地吐痰')
+    def cha(self):
+        print('就喜欢插队')
+    def eat(self,food):
+        print('%s eating %s' %(self.name,food))
+
+
+
+b = Ball('chr')
+b.eat('shi')
+
+'''''
+
+'''''
+
+# 类属性又称为静态变量，这些数据是与它们依赖的类对象绑定的，并不依赖于任何的类实例
+# 函数属性命名规则是动词_名词，play_game play_ball say_word
+
+
+class Chinese:
+    country = 'china'
+
+#查看
+
+print(Chinese.country)
+
+
+#修改
+
+Chinese.country = 'Japan'
+print(Chinese.country)
+
+#增加
+Chinese.dang = 'gongchandang'
+print(Chinese.dang)
+
+
+# 删除
+del Chinese.dang
+print(Chinese.__dict__)
+
+'''''
+
+'''''
+
+
+# 实例属性增删改查
+
+# 实例没有函数属性，实例的函数属性是调用类的
+
+class Chinese:
+    country = 'china'
+    def __init__(self, name):
+        self.name = name
+        print(name)
+
+#查看
+
+p1 = Chinese('klj')
+
+
+# 增加
+
+p1.dang = '共产党'
+print(p1.dang)
+
+def test(self):
+    print('sdjklfhkjsahf')
+
+p1.jia = test
+print(p1.__dict__)
+
+# 修改
+p1.country = 'USA'
+print(p1.country)
+print(Chinese.country)
+
+p1.__dict__['coutry'] = 'austria'   # 不要修改底层的属性字典
+print(p1.__dict__)
+print(p1.country)    
+
+# 删除
+
+del p1.dang
+print(p1.__dict__)
+
+
+'''''
+
 # python = ['lcg','szw','zjw']
 # linux = ['lcg']
 #
@@ -28,7 +1449,6 @@
 # tpl = "i am {:s}, age {:d}, money {:f}".format("seven", 18, 88888.1)
 # tpl = 'i am {:s}, age {:d}'.format(*['seven', 1])
 # print(tpl)
-
 
 
 # def chris(x):
@@ -184,7 +1604,7 @@ def v_code():
         ret += s
     return ret[:5]
 print(v_code())
- 
+
 '''''
 '''''
 # 最后的data["name"]必须是"，因为dumps的时候转成"
@@ -197,9 +1617,200 @@ with open('/Volumes/Work/Python/wenjian' , 'r') as f :
 
 '''''
 
+'''''
+
+__new__方法：实例化对象（开辟内存空间）
+__init__方法：对实例化对象进行初始化操作
+__call__方法：让类可调用，实现装饰器
+__str__方法：当使用print输出对象的时候，默认打印对象的内存地址。如果类定义了__str__方法，那么就会打印从在这个方法中return的数据
+__del__方法：当删除对象时，python解释器会默认调用这个方法，让这个对象的引用计数减1，当对象的引用计数为0的时候，则对象才会被真正删除（内存被回收）
 
 
 
+
+'''''
+
+'''''
+# 函数装饰器
+
+import time
+
+def cc(func):        # func 接收了f1函数的内存地址
+    def dd(func_name):        # func_name 接收了f1的参数
+        print(time.time())
+        func(func_name)
+    return dd
+
+@cc
+def f1(func_name):
+    print('123123%s' %func_name)
+f1('woqu')
+
+
+'''''
+
+'''''
+
+
+# 定义万能函数装饰器
+
+
+def outFunc(func):
+    # 接收不同的参数
+    def wrapper(*args, **kwargs):
+        print('万能装饰器')
+        # 再原样传回给被装饰的函数
+        return func(*args, **kwargs)
+
+    return wrapper
+
+# 进行装饰
+@outFunc
+def addNmu(a,b):
+
+    return a+b
+# 调用被装饰的addNum函数
+print(addNmu(3,4))
+
+# 执行效果
+# 万能装饰器
+# 7
+
+
+'''''
+
+'''''
+
+# 类装饰器与函数装饰器的一些错误应用
+# 以下2个tracer 功能一样
+# 类装饰器
+class tracer:
+    def __init__(self, func):  # 接受一个函数对象
+        self.calls = 0
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        self.calls += 1
+        print('类装饰器:call %s to %s' % (self.calls, self.func.__name__), ',args:', *args)
+        return self.func(*args, **kwargs)  # 调用函数
+
+
+# 函数装饰器
+def tracer_func(func):
+    calls = 0  # 调用次数
+
+    def on_call(*args, **kwargs):
+        nonlocal calls
+        calls += 1
+        print('函数装饰器:call %s to %s' % (calls, func.__name__), ',args:', *args)
+        return func(*args, **kwargs)
+
+    return on_call
+
+
+# 类装饰器作用于函数上
+@tracer
+def testFunc(x, y):  # 此时testFunc是一个tracer实例
+    print(x, y)
+
+
+testFunc(1, 2)  # ok,调用tracer.__call__()
+
+
+# echo:
+# call 1 to testFunc
+# def spam: 1 2
+
+# 类装饰器作用于类方法上
+class Person:
+    def __init__(self, name='person'):
+        self.name = name
+
+    @tracer
+    def lastName(self):  # lastName 是一个tracer实例
+        return self.name.split()[-1]
+
+
+p = Person()
+
+
+# print(p.lastName())
+# 这里将会出错
+# lastName是一个tracer实例,lastName(),相当于tracer(),tracer实例本身作为self传递进了__call__ ,而Person实例并未传递进去
+
+# 函数装饰器作用于类方法
+class Person1:
+    def __init__(self, name='person'):
+        self.name = name
+
+    @tracer_func
+    def lastName(self):  # lastName = tracer_func(lastName),
+        return self.name.split()[-1]
+
+
+p = Person1()
+print(p.lastName())  # 调用on_call , p 被传入进*args
+
+'''''
+
+'''''
+
+class Room:
+    tag = 1
+    def __init__(self,name,windth,length,heigh):
+        self.name = name
+        self.windth = windth
+        self.length = length
+        self.heigh = heigh
+    # def tell_info(self):
+    #     print('----->>>>',self.tag)
+
+    @property      # 把函数属性变成数据属性，既可以访问自己的，也可以访问类的
+
+    def mianji(self):
+        # print('面积是%s' %(self.windth *self.length))
+        return self.windth *self.length
+    def test(self):
+        print('123',self.name)
+
+    @classmethod    # 类方法的定义只是为了类去调用
+    def tell_info(cls):
+        print(cls)
+        print('----->>>>',cls.tag)
+
+
+    @staticmethod   # 静态方法名义上归属类管理，不能使用类变量和实例变量，是类的工具包
+    def wash_body(name,name2,name3):
+        print('%s %s %s washing' %(name,name2,name3))
+
+
+
+r1 = Room('厕所',100,100,111)
+# print(r1.mianji)
+# print(r1.name)
+# Room.tell_info()
+Room.wash_body('alaex','chris','jkdjl')
+
+
+
+'''''
+
+'''''
+
+当类之间有显著不同，并较小的类是较大的类所需要的组件的时候，用组合
+例如机器人类，是由胳膊、腿、头，电池等组合而成的
+
+
+当类之间有很多相同的功能，提取共同的功能做成基类，用继承比较好
+
+例如狗--->>猫叫、吃、喝、拉、撒    猫--->>狗叫、吃、喝、拉、撒
+
+动物（基类）：吃、喝、拉、撒
+猫：猫叫      #  派生
+狗：狗叫
+
+
+'''''
 
 # 多态
 
@@ -233,6 +1844,139 @@ with open('/Volumes/Work/Python/wenjian' , 'r') as f :
 #     obj.turn_ice()
 # func(w1)
 
+
+'''''
+
+#------------>>>> 类组合
+
+
+
+# class Hand:
+#     pass
+#
+# class Foot:
+#     pass
+#
+# class Trunk:
+#     pass
+#
+# class Head:
+#     pass
+#
+# class Person:
+#     def __init__(self,id_num,name):
+#         self.id_num = id_num
+#         self.name = name
+#         self.hand = Hand()
+#         self.foot = Foot()
+#         self.trunk = Trunk()
+#         self.head = Head()
+#
+# p1 = Person('123','chris')
+# print(p1.__dict__)
+
+
+class School:
+    def __init__(self,name,addr):
+        self.name = name
+        self.addr = addr
+
+    def zhaosheng(self):
+        print('%s zhaoshenging' %self.name)
+
+class Course:
+    def __init__(self,name,price,period,school):
+        self.name = name
+        self.price = price
+        self.period = period
+        self.school = school
+class Teacher:
+    def __init__(self,name,age,sex,course,school):
+        self.name = name
+        self.age = age
+        self.sex = sex
+        self.course = course
+        self.school = school
+
+s1 = School('oldboy','beijing')
+s2 = School('oldboy','nanjing')
+s3 = School('oldboy','dongjing')
+
+c1 = Course('linux',100,'60min',s1)
+c2 = Course('java',1500,'160min',s2)
+c3 = Course('python',1000,'30min',s3)
+
+t1 = Teacher('mc',19,'man',c1,s1)
+
+
+
+# print(t1.__dict__)
+# print(t1.school.name)
+
+# print(c1.__dict__)
+# print(c1.school.name)
+
+
+
+# msg='''
+# 1 老男孩 北京校区
+# 2 老男孩 南京校区
+# 3 老男孩 东京校区
+# '''
+#
+# while True:
+#     print(msg)
+#     menu = {
+#         '1':s1,
+#         '2':s2,
+#         '3':s3
+#     }
+#     choice = input('please input your school area:')
+#     school_obj = menu[choice]
+#     # print(school_obj.addr)
+#
+#     course_name = input('新增课程名:')
+#     course_price = input('新增课程价格:')
+#     course_period = input('新增课程时长:')
+#
+#     new_course = Course(course_name,course_price,course_period,school_obj)
+#     print(new_course)
+#     print('课程%s ， 来自于 %s 学习' %(new_course.name , new_course.school.name))
+
+
+'''''
+
+
+class Dad:
+    '这是个爸爸类'
+    money = 10
+    def __init__(self,name):
+        print('dad')
+        self.name = name
+
+    def hit_son(self):
+        print('%s 正在打儿子' %self.name)
+
+
+class Son(Dad):
+    money = 100000
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+
+
+
+print(Dad.__dict__)
+print(Son.__dict__)
+print(Son.money)
+
+s1 = Son('is')
+print(s1.name)
+print(s1.__dict__)
+s1.hit_son()
+
+'''''
+
 '''''
 
 import modu as md
@@ -252,6 +1996,484 @@ else:
 x=1111
 fish=sys.modules[__name__]
 print(hasattr(fish,'x'))
+
+
+
+
+
+
+
+'''''
+
+import abc
+
+
+class All_file(metaclass=abc.ABCMeta):  # 定义基类，且基类不需要实例化
+
+    @abc.abstractmethod  # 利用该装饰器定义了接口函数
+    def read(self):  # 子类必须实现该函数，定义read接口函数
+        pass
+
+    @abc.abstractmethod
+    def write(self):
+        pass
+
+
+class Disk(All_file):  # 定义子类
+    def read(self):  # 子类必须实现All_file基类中的函数read()
+        print('硬盘数据的读取方法')
+
+    def write(self):
+        print('硬盘数据的写入方法')
+
+
+class Cdrom(All_file):
+    def read(self):
+        print('磁盘数据的读取方法')
+
+    def write(self):
+        print('磁盘数据的写入方法')
+
+
+class Mem(All_file):
+    def read(self):
+        print('内存数据的读取方法')
+
+    def write(self):
+        print('内存数据的写入方法')
+
+
+m1 = Mem()
+m1.read()
+m1.write()
+
+'''''
+
+'''''
+
+
+class Vehicle:
+    Coutry = 'China'
+
+    def __init__(self, name, speed, load, power):
+        self.name = name
+        self.speed = speed
+        self.load = load
+        self.power = power
+
+    def run(self):
+        print('go go go')
+
+
+class Subway(Vehicle):
+    def __init__(self, name, speed, load, power, line):
+        # 此处的self 就是上面一行传下来的self
+
+        # Vehicle.__init__(self,name,speed,load,power)   # 实例化、对象调用类方法会传值给self
+        super().__init__(name, speed, load, power)
+        self.line = line
+
+    def show(self):
+        print(self.name, self.line)
+
+    def run(self):
+        print('welcome to subway %s line ' % self.line)
+        # Vehicle.run(self)
+        super().run()
+        super(Subway, self).run()
+
+
+s13 = Subway('shanghai', '200km/s', 10000, 'water', 12)
+print(s13.__class__)
+s13.show()
+s13.run()
+
+'''''
+
+
+
+
+#
+#
+# #---------------->>>>>> 课程表
+#
+#
+# class School:
+#     def __init__(self,name,addr):
+#         self.name = name
+#         self.addr = addr
+#
+# class Course:
+#     def __init__(self,name,time,price,school):
+#         self.name = name
+#         self.time = time
+#         self.price = price
+#         self.school = school
+#
+# class Teacher:
+#     def __init__(self,name,course,school):
+#         self.name = name
+#         self.course = course
+#         self.school = school
+#
+# class Student:
+#     def __init__(self,name,classes,school):
+#         self.name = name
+#         self.classes = classes
+#         self.school = school
+#
+#
+#
+# menu ='''
+#
+# 1 Establish
+#
+# 2 Manage
+#
+# '''
+#
+# menu_school ='''
+#
+# 上海
+#
+# 北京
+#
+# '''
+#
+#
+# while True:
+#     print(menu)
+#     choice = input('please input menu number')
+#     if choice == '1':
+#         print(menu_school)
+#         school_name = input('please input your school')
+#         if school_name != '北京' and school_name != '上海':
+#             print('your school name is error')
+#             break
+#         elif school_name == '北京':
+#             print('beijing huanyingni')
+#     if choice == 2:
+#         pass
+#
+#
+#
+#
+#
+# # dic='''
+# #
+# # 1 teacher
+# # 2 student
+# # 3 admin
+# #
+# # '''
+# #
+# #
+# #
+# # while True:
+# #     print(dic)
+# #     choice = input('please choice your number')
+# #     if choice == 1:
+# #         establish_school = input('please input your school')
+#
+#
+#
+#
+#
+#
+# # b_school = School('xindongfang','beijing')
+# # s_school = School('lanxiang','shanghai')
+# #
+# #
+# #
+# #
+# # b_linux = Course('linux','2h',10000,b_school)
+# # b_python = Course('python','1h',1000,b_school)
+# # s_go = Course('go','211h',1000000,s_school)
+#
+
+
+'''''
+# 类的继承有两层意义：1、改变   2、扩展
+
+
+
+# --------->>>>>>多态--表明动态（运行时）绑定的存在，允许重载及运行时类型确认和验证
+# --------->>>>>>多态性：一种调用方式，不同的执行效果，多态性依赖于继承
+# --------->>>>>>多态性定义统一的接口，接口就是函数
+
+
+
+
+class gradapa(object):
+    def __init__(self,money):
+        self.money = money
+
+    def p(self):
+        print("this is gradapa")
+
+class father(gradapa):
+    def __init__(self,money,job):
+        super().__init__(money)
+        self.job = job
+    def p(self):
+        print("this is father,我重写了父类的方法")
+
+class mother(gradapa): 
+    def __init__(self, money, job):
+        super().__init__(money)
+        self.job = job
+
+    def p(self):
+         print("this is mother,我重写了父类的方法")
+         return 100
+
+#定义一个函数，函数调用类中的p()方法
+
+def fc(obj): 
+    obj.p()
+gradapa1 = gradapa(3000) 
+father1 = father(2000,"工人")
+mother1 = mother(1000,"老师")
+
+fc(gradapa1)            #这里的多态性体现是向同一个函数，传递不同参数后，可以实现不同功能.
+fc(father1)
+print(fc(mother1))
+
+'''''
+
+'''''
+
+# 封装的本质是明确区分内外
+
+class People:
+    _star = 'earth'
+    __start = 'safearth'   # __开头的方法都会被python重新命名为_类名__方法
+    def __init__(self,id,name,age):
+        self.id = id
+        self.name = name
+        self.age = age
+
+    def get_id(self):
+        print('i am private ide, my ide is %s' %self.id)
+
+    def get_star(self):    # 通过函数内部调用，可以直接使用__start，这就是封装的意义，get_star就是访问函数(接口函数)
+        print(self.__start)
+
+
+# p1 = People(12,122,1444)
+# print(People.__dict__)
+# print(p1._star)
+# print(p1._People__start)
+# p1.get_star()
+
+
+'''''
+
+'''''
+
+class Area:
+
+    def __init__(self,name,width,length):
+        self.name = name
+        self.__width = width
+        self.__length = length
+
+    def tell_area(self):
+        return self.__width * self.__length
+
+r1 = Area('weishengjian',30,30)
+print(r1.tell_area())
+
+
+
+'''''
+
+'''''
+
+
+class BlackMedium:
+    feture = 'Ugly'
+    def __init__(self,name,addr):
+        self.name = name
+        self.addr = addr
+
+    def sell_house(self):
+        print('%s 正在卖房子' %self.name)
+
+    def rent_house(self):
+        print('%s 正在租房子' %self.name)
+
+b1 = BlackMedium('王城置地','nbxilu')
+# print(b1.name)
+# print(b1.__dict__['name'])
+# print(hasattr(b1,'name'))         # b1.是否能调用'name'方法
+# print(hasattr(b1,'sell_house'))
+
+
+# print(getattr(b1,'name'))
+# print(getattr(b1,'sell_house'))   # 返回函数的内存地址
+# func = getattr(b1,'sell_house')
+# func()
+#
+#
+# print(getattr(b1,'sell_housesadf'))      # 查询失败报错
+# print(getattr(b1,'sell_housedsfsd','不要报错'))      # 查询失败报最后一个参数
+
+# b1.sb = 'alex'
+# setattr(b1,'sb','alex')     # 等于b1.sb = 'alex'
+# setattr(b1,'name','sb')      # 修改属性
+# setattr(b1,'func',lambda x:x+1)
+# setattr(b1,'func1',lambda self:self.name +'sb')
+# print(b1.__dict__)
+
+
+# delattr(b1,'name','sb')      # 删除属性,等同于del b1.name
+
+
+
+'''''
+
+'''''
+
+#------>>> 动态导入模块
+
+
+# from m1 import t
+
+module_t = __import__('m1.t')
+print(module_t)
+module_t.t.test1()
+
+
+import importlib
+m= importlib.import_module('m1.t')
+print(m)
+m.test1()
+
+
+'''''
+
+'''''
+
+class Foo:
+    x=1
+    def __init__(self,y):
+        self.y=y
+    def __getattr__(self, item):
+        print('执行__getattr__')
+
+    def __delattr__(self, item):
+        print('删除操作__delattr__')
+        self.__dict__.pop(item) # 直接操作底层字典
+
+    def __setattr__(self, key, value):
+        # self.key = value    # 进入无限递归，不能使用它
+        self.__dict__[key] = value    # 直接操作底层字典，不会触发__setattr__，也不会进入递归
+        print('执行操作__delattr__')
+
+
+# f1=Foo(10)
+# print(f1.y)    # 只有属性不存在时，会触发__getattr__
+# print(getattr(f1,'y'))    # len(str)---->>>str.__len__()
+# f1.yyyyyy
+
+
+# f1=Foo(10)
+# del f1.yy    # 删除属性时，会触发__delattr__
+# del f1.x
+
+
+
+
+f1=Foo(10)
+f1.x = 199    # 设置属性时，会触发__delattr__
+# print(Foo.__dict__)
+print(dir(Foo))
+# print(f1.__dict__)
+print(dir(f1))
+
+
+
+
+'''''
+
+'''''
+
+class Foo:
+    def __init__(self,name):
+        self.name=name
+
+
+    def __getattr__(self, item):
+        print('no faxian %s'%item)
+
+f=Foo('alex')
+print(f.age)
+print(f.name)
+
+
+'''''
+
+'''''
+
+class Foo:
+    def __init__(self,name):
+        self.name=name
+
+
+    def __getattr__(self, item):
+        print('no faxian %s'%item)
+
+
+    def __setattr__(self, key, value):
+        print('执行setattr',key,value)
+        if type(key) is str:
+            print('开始设置')
+            self.__dict__[key]=value
+        else:
+            print('字符串类型不对，不能设置')
+
+    def __delattr__(self, item):
+        print('执行delattr',item)
+        self.__dict__.pop(item)
+f=Foo('alex')
+# f.age=18
+# f.gender='female'
+# print(f.__dict__)
+# print(dir(f))
+
+# setattr(f,'age',18)
+# print(f.__dict__)
+
+
+
+
+'''''
+
+'''''
+
+class List(list):
+    def append(self, p_object):
+        if type(p_object) is str:
+            # list.append(self, p_object)
+            super().append(p_object)
+        else:
+            print('类型不对不能添加')
+    def show_middle(self):
+        mid_index=int(len(self)/2)
+        return self[mid_index]
+
+l1=List('helloworld')
+# print(l1,type(l1))
+# print(l1.show_middle())
+l1.append('1111')
+print(l1)
+
+# l2=list('hello world')
+# print(l2,type(l2))
+
+
+
 
 
 '''''
@@ -280,7 +2502,6 @@ class Foo:
         self.__dict__.pop(item)
 
 '''''
-
 
 '''''
 
@@ -311,7 +2532,6 @@ print(f1.n)
 
 
 '''''
-
 
 '''''
 
@@ -359,7 +2579,6 @@ print(Goo.__dict__)
 
 '''''
 
-
 '''''
 format_dic={
     'ymd':'{0.year}-{0.month}-{0.day}',
@@ -388,8 +2607,6 @@ print(format(d1,'ymd'))
 
 
 '''''
-
-
 
 '''''
 
@@ -437,8 +2654,6 @@ print('_____?????')   # 删除实例的时候才会触发__del__
 
 '''''
 
-
-
 '''''
 class Foo:
     def __init__(self,age):
@@ -468,8 +2683,6 @@ for i in f1:        # obj=iter(f1)----->>f1.__iter__()
 
 '''''
 
-
-
 '''''
 
 # 斐波那契数列
@@ -495,8 +2708,8 @@ if __name__ == '__main__':
     f1=Fibonacci(15)
     for i in f1:
         print(i)
-        
-        
+
+
 
 # 2 生成器
 
@@ -512,6 +2725,9 @@ for i in Fib(11):
 
 
 '''''
+
+'''''
+
 # 实现了 __get__()、__set__()、__del__() 其中至少一个方法的类，就是一个描述符
 # 描述符优先级: 类属性--->>>数据描述符--->>>实例属性--->>>非数据描述符--->>>找不到属性触发__getattr__
 
@@ -536,3 +2752,415 @@ print(b1.__dict__)
 #
 b1.y=11111111111111111111111111111111111111
 print(b1.__dict__)
+
+
+'''''
+
+'''''
+
+
+
+# 包装：python为大家提供了标准数据类型，以及丰富的内置方法，其实在很多场景下我们都需要基于
+#     标准数据类型来定制我们自己的数据类型，新增/改写方法，这就用到了我们刚学的继承/派生知识
+
+
+
+
+# 授权：授权是包装的一个特性, 包装一个类型通常是对已存在的类型的一些定制,这种做法可以新建,
+#      修改或删除原有产品的功能。其它的则保持原样。授权的过程,即是所有更新的功能都是由新类
+#      的某部分来处理,但已存在的功能就授权给对象的默认属性。
+
+# 实现授权的关键点就是覆盖__getattr__方法
+
+import time
+class FileHandle:
+
+    def __init__(self,filename,mode='r',encoding='utf-8'):
+        self.file=open(filename,mode,encoding=encoding)
+        self.mode=mode
+        self.encoding=encoding
+
+    def __getattr__(self, item):
+        # print(item,type(item))
+        # self.file.read()
+        return getattr(self.file,item)
+    #
+    # def read(self):
+    #     pass
+    #
+    def write(self,line):
+        t=time.strftime('%Y-%m-%d %X')
+        print('---->>>',line)
+        self.file.write('%s %s' %(t,line))
+
+
+#
+# f1=FileHandle('a.txt','w')
+# print(f1.file)
+# # print(f1.__dict__)
+# # print(FileHandle.__dict__)
+# f1.read    # 触发__getattr__
+# print('----->>',f1.read)
+# #
+# #
+# sys_f= open('b.txt','w')
+# print('----->>',getattr(sys_f,'read'))
+
+f2=FileHandle('c.txt','r+')
+f2.write('111111\n')
+f2.write('111111q22222\n')
+f2.write('11111444441\n')
+f2.seek(1)
+print(f2.read())
+
+
+'''''
+
+'''''
+
+
+class Foo:
+    pass
+
+class Eoo(Foo):
+    pass
+
+f1=Foo()
+f2=Eoo()
+
+print(issubclass(Eoo,Foo))
+print(isinstance(f1,Foo))
+print(isinstance(f2,Foo))
+print(type(f1))
+print(type(f2))
+
+'''''
+
+'''''
+
+class Foo:
+
+    def __init__(self,name):
+        self.n=name
+
+    def chris(self):
+        print('wo jue de %s' %self.n)
+        return self.n
+
+    def __getattr__(self, item):
+        print('wo lai le')
+        # return self.__dict__['chris']
+
+    def __getattribute__(self, item):
+        print('wo ye lai le')
+        raise AttributeError('liang le ya')
+
+f1=Foo(100)
+# print(Foo.__dict__)
+# print(f1.n)
+print(f1.name)
+
+
+
+
+'''''
+
+'''''
+
+class Foo:
+    x= 12
+
+    def __init__(self,name,age):
+        self.n=name
+        self.m=age
+
+    def __getitem__(self, item):
+        print('get get get')
+        return self.__dict__[item]
+
+    def __setitem__(self, key, value):
+        print('set set set')
+        self.__dict__[key]=value
+
+    def __delitem__(self, key):
+        print('del del del')
+        self.__dict__.pop(key)
+
+f1=Foo('chris',25)
+print(f1.__dict__)
+
+print(f1['n'])
+
+#
+# # f1.sex='male'
+# f1['sex']='female'
+# print(f1.__dict__)
+#
+# # del f1.sex
+# del f1['sex']
+# print(f1.__dict__)
+
+
+'''''
+
+'''''
+
+# 改变对象的字符串显示__str__,__repr__
+# str函数或者print函数--->obj.__str__()
+# repr或者交互式解释器--->obj.__repr__()
+# 如果__str__没有被定义,那么就会使用__repr__来代替输出
+# 注意:这俩方法的返回值必须是字符串,否则抛出异常
+
+
+# class Foo:
+#     def __str__(self):
+#         return '自定制对象的显示方式'
+#
+#
+# f1=Foo()
+# print(f1)   #----str(f1)-->>f1.__str__()
+# print(str(f1))
+
+
+class Foo:
+    def __str__(self):
+        return '自定制对象的显示方式'
+    def __repr__(self):
+        return 'wo cao'
+
+
+f1 = Foo()
+print(f1)  # ----str(f1)-->>f1.__str__(),找不到str会直接找repr作为替代品
+print(repr(f1))    #f1.__repr__()
+
+
+
+'''''
+
+'''''
+
+# 自定制格式化字符串__format__
+
+format_dic={
+    'ymd':'{0.year}{0.month}{0.day}',
+    'mdy':'{0.month}-{0.day}-{0.year}'
+}
+
+class Date:
+
+    def __init__(self,year,month,day):
+        self.year=year
+        self.month=month
+        self.day=day
+
+    def __format__(self, format_spec):
+        print('wo lai le')
+        print('----->>>',format_spec)
+
+        if not format_spec or format_spec not in format_dic:
+            format_spec='ymd'
+        fm=format_dic[format_spec]
+        return fm.format(self)
+
+d1=Date(2018,12,23)
+print(format(d1))
+print(format(d1,'mdy'))
+# x='{0.year}{0.month}{0.day}'.format(d1)
+# print(x)
+
+
+
+'''''
+
+'''''
+
+class Foo:
+    __slots__ = ['name','age']
+
+f1=Foo()
+f1.name='chris'
+print(f1.name)
+# print(f1.__dict__)   #f1不再有__dict__
+print(f1.__slots__)
+print(Foo.__slots__)
+
+
+f2=Foo()
+print(f2.__slots__)
+
+
+'''''
+
+'''''
+
+
+# __doc__ 描述信息，该属性无法继承给子类
+
+class Foo:
+    'go go go'
+
+class Bar(Foo):
+    pass
+
+print(Foo.__doc__)
+print(Foo.__dict__)
+print(Bar.__doc__)
+print(Bar.__dict__)
+
+
+'''''
+
+'''''
+
+class Foo:
+    def __init__(self,name):
+        self.name=name
+
+    def __del__(self):
+        print('xiagao')
+    def __call__(self, *args, **kwargs):
+        print('shili ye neng yong kuohao')
+f1=Foo('chris')
+# print(f1.__dict__)
+# print(Foo.__dict__)
+f1()
+del f1
+
+
+'''''
+
+'''''
+class Foo:
+    def __init__(self,n):
+        self.n=n
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.n+=1
+        return self.n
+
+
+
+f1=Foo(10)
+print(iter(f1))
+# for i in f1:    # iter(f1)----->>>f1.__iter__()
+#     print(i)
+
+
+'''''
+
+'''''
+
+
+class Str:
+    def __get__(self, instance, owner):
+        print('Str调用')
+    def __set__(self, instance, value):
+        print('Str设置...')
+    def __delete__(self, instance):
+        print('Str删除...')
+
+class People:
+    name=Str()
+    def __init__(self,name,age): #name被Str类代理,age被Int类代理,
+        self.name=name
+        self.age=age
+
+
+
+
+类属性>数据描述符
+
+#基于上面的演示,我们已经知道,在一个类中定义描述符它就是一个类属性,存在于类的属性字典中,而不是实例的属性字典
+
+原因:描述符在使用时被定义成另外一个类的类属性,因而类属性比二次加工的描述符伪装而来的类属性有更高的优先级
+People.name #恩,调用类属性name,找不到就去找描述符伪装的类属性name,触发了__get__()
+
+People.name='egon' #那赋值呢,直接赋值了一个类属性,它拥有更高的优先级,相当于覆盖了描述符,肯定不会触发描述符的__set__()
+del People.name #同上
+
+
+
+
+
+#  数据描述符>实例属性
+
+p1=People('egon',18)
+print(p1.__dict__)
+#如果描述符是一个数据描述符(即有__get__又有__set__),那么p1.name的调用与赋值都是触发描述符的操作,于p1本身无关了,相当于覆盖了实例的属性
+p1.name='egonnnnnn'
+p1.name
+print(p1.__dict__)   #实例的属性字典中没有name,因为name是一个数据描述符,优先级高于实例属性,查看/赋值/删除都是跟描述符有关,与实例无关了
+del p1.name
+
+
+'''''
+
+'''''
+
+# 实例属性>非数据描述符
+
+class Foo:
+    def func(self):
+        print('我胡汉三又回来了')
+f1=Foo()
+f1.func() #调用类的方法,也可以说是调用非数据描述符
+          # 函数是一个非数据描述符对象(一切皆对象么)
+print(dir(Foo.func))
+print(hasattr(Foo.func,'__set__'))
+print(hasattr(Foo.func,'__get__'))
+print(hasattr(Foo.func,'__delete__'))
+# #有人可能会问,描述符不都是类么,函数怎么算也应该是一个对象啊,怎么就是描述符了
+# #笨蛋哥,描述符是类没问题,描述符在应用的时候不都是实例化成一个类属性么
+# #函数就是一个由非描述符类实例化得到的对象
+# #没错，字符串也一样
+#
+#
+f1.func='这是实例属性啊'
+print(f1.func)
+#
+del f1.func #删掉了非数据
+f1.func()
+
+'''''
+
+'''''
+# 实例属性>非数据描述符
+
+class Foo:
+    def __set__(self, instance, value):
+        print('set')
+    def __get__(self, instance, owner):
+        print('get')
+class Room:
+    name=Foo()
+    def __init__(self,name,width,length):
+        self.name=name
+        self.width=width
+        self.length=length
+
+
+#name是一个数据描述符,因为name=Foo()而Foo实现了get和set方法,因而比实例属性有更高的优先级
+#对实例的属性操作,触发的都是描述符的
+r1=Room('厕所',1,1)
+r1.name
+r1.name='厨房'
+
+'''''
+
+
+# 非数据描述符>找不到
+
+class Foo:
+    def func(self):
+        print('我胡汉三又回来了')
+
+    def __getattr__(self, item):
+        print('找不到了当然是来找我啦', item)
+
+
+f1 = Foo()
+
+f1.xxxxxxxxxxx
